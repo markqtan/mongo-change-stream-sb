@@ -10,7 +10,7 @@ Count: <label id="count"></label>
 
 <script>
   function createCountSource() {
-    var source = new EventSource("http://localhost:8082/post");
+    var source = new EventSource("http://localhost:8082/post/5f459a5d1290a4007a8476c0/subscribe");
     source.addEventListener('message', function (e) {
       var body = JSON.parse(e.data);
 	  console.log('body', body)

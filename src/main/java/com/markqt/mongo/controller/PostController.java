@@ -41,6 +41,7 @@ public class PostController {
 
     @GetMapping(path = "/{id}/subscribe", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Post> subscribe(@PathVariable String id) {
+    	System.out.println("subscribe: " + id);
         return this.postService.subscribe(id);
     }
 
